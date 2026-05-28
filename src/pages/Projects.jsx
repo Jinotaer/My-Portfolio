@@ -1,181 +1,125 @@
-import { ArrowRight, ExternalLink } from "lucide-react";
+import { ExternalLink, FolderGit2 } from "lucide-react";
+import inventoryImage from "../assets/Inventory.png";
+import chaingaurdImage from "../assets/capstone.png";
+import cjciamge from "../assets/cjcchurch.png";
+import laundryImage from "../assets/Laundryshop.png";
+import GradingImage from "../assets/buksugrading.png";
+import VissionImage from "../assets/visionchat.png";
+import LibraryImage from "../assets/minilibrary.png";
 
 const featuredProject = {
-  title: "FlowDesk",
+  title: "Chaingaurd",
   description:
-    "A productivity dashboard concept focused on task planning, lightweight reporting, and clean decision-making screens. I designed it to feel structured, fast, and clear even with dense information.",
-  tags: ["React", "TailwindCSS", "Charts", "Dashboard UI"],
-  year: "2025",
+    "ChainGuard is a digital evidence management system built to support the proper handling, tracking, and documentation of digital evidence. The system helps manage evidence records, case information, handlers, timestamps, and status updates to maintain an organized chain of custody and improve evidence accountability.",
+  tags: ["Laravel", "PostgreSQL", "TailwindCSS", "Blade"],
+  year: "2026",
+  image: chaingaurdImage,
+  githubUrl: "",
+  liveUrl: "https://chainguardbuk.me/",
 };
 
 const projects = [
   {
+    title: "CJC Church Website",
+    description:
+      "A responsive church website for sharing announcements, ministries, events, Bible verses, and community updates with members and visitors.",
+    tags: ["Laravel", "MySQL", "React", "TailwindCSS"],
+    year: "2026",
+    image: cjciamge,
+    githubUrl: "https://github.com/Jinotaer/CJC-Minsion-Church.git",
+    liveUrl: "",
+  },
+  {
+    title: "LaundryTrack",
+    description:
+      "A web-based laundry shop management system for managing customers, laundry orders, services, payments, and transaction records.",
+    tags: ["Laravel", "MySQL", "Blade", "TailwindCSS"],
+    year: "2026",
+    image: laundryImage,
+    githubUrl: "https://github.com/Jinotaer/Multi-Tenant-Laundry-Shop-Management-System.git",
+    liveUrl: "",
+  },
+  {
+    title: "Vission Chat",
+    description:
+      "A real-time random chat and video call platform inspired by Omegle, designed for instant user matching and simple online conversations.",
+    tags: ["React", "SocketIO", "Vite", "TailwindCSS"],
+    year: "2026",
+    image: VissionImage,
+    githubUrl: "",
+    liveUrl: "https://visionchat.duckdns.org/welcome",
+  },
+  {
+    title: "BukSu Grading System",
+    description:
+      "A web-based grading system for managing student records, grades, and academic performance.",
+    tags: ["MongoDB", "Express", "React", "Node.js", "TailwindCSS"],
+    year: "2025",
+    image: GradingImage,
+    githubUrl: "",
+    liveUrl: "https://grading.chainguardbuk.me/login",
+  },
+  {
+    title: "BukSu Library Management System",
+    description:
+      "A web-based library management system for tracking book inventory, managing authors and borrowers, monitoring active loans, and organizing library records through a modern dashboard.",
+    tags: ["Laravel", "MySQL", "TailwindCSS", "Blade"],
+    year: "2025",
+    image: LibraryImage,
+    githubUrl: "https://github.com/Jinotaer/Mini-Library-Ni-Pjonskie.git",
+    liveUrl: "",
+  },
+  {
     title: "BNHS Inventory",
     description:
-      "A school inventory system build centered on practical forms, records, and clear data flow.",
+      "A school inventory management system for tracking supplies, equipment, records, and item movement through organized forms and clear data flow.",
     tags: ["PHP", "MySQL", "XAMPP"],
-    year: "2025",
-    variant: "inventory",
-  },
-  {
-    title: "JobTrack",
-    description:
-      "A job application tracker concept designed to keep status, notes, and progress visible at a glance.",
-    tags: ["React", "UI Design", "Tracking"],
-    year: "2025",
-    variant: "tracker",
-  },
-  {
-    title: "SimplePay",
-    description:
-      "A payment landing page exploration with clear hierarchy, focused CTA blocks, and conversion-first layout.",
-    tags: ["Landing Page", "TailwindCSS", "UX"],
     year: "2024",
-    variant: "payments",
+    image: inventoryImage,
+    githubUrl: "https://github.com/Jinotaer/BUKIDNON_NHS_INVENTORY_SYSTEM.git",
+    liveUrl: "",
   },
 ];
 
-function FeaturedPreview() {
+function ProjectLinks({ project }) {
   return (
-    <div className="relative h-full min-h-[280px] overflow-hidden rounded-[24px] border border-gray-300 bg-gradient-to-br from-white via-slate-50 to-indigo-50 p-4 dark:border-white/8 dark:from-[#151821] dark:via-[#10131a] dark:to-[#17132a]">
-      <div className="rounded-2xl border border-slate-200/80 bg-white/95 shadow-[0_18px_40px_-30px_rgba(15,23,42,0.25)] dark:border-white/8 dark:bg-[#0c0f16] dark:shadow-none">
-        <div className="flex items-center justify-between border-b border-slate-200/70 px-4 py-3 dark:border-white/8">
-          <div className="flex gap-2">
-            <span className="h-2.5 w-2.5 rounded-full bg-rose-400" />
-            <span className="h-2.5 w-2.5 rounded-full bg-amber-400" />
-            <span className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
-          </div>
-          <div className="h-7 w-40 rounded-full bg-slate-100 dark:bg-white/[0.05]" />
-        </div>
+    <div className="flex items-center gap-2">
+      {project.githubUrl ? (
+        <a
+          href={project.githubUrl}
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex items-center gap-2 rounded-full border border-slate-200 px-3 py-2 text-sm font-medium text-slate-700 transition hover:border-indigo-300 hover:text-indigo-600 dark:border-white/10 dark:text-slate-200 dark:hover:border-indigo-400/50 dark:hover:text-white"
+        >
+          <FolderGit2 size={15} />
+          GitHub
+        </a>
+      ) : null}
 
-        <div className="grid gap-4 p-4 md:grid-cols-[1.15fr_0.85fr]">
-          <div className="space-y-4">
-            <div className="rounded-2xl bg-gradient-to-br from-indigo-500 to-violet-500 p-5 text-white">
-              <div className="flex items-start justify-between">
-                <div>
-                  <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-white/70">
-                    Daily Focus
-                  </p>
-                  <h3 className="mt-2 text-2xl font-bold tracking-[-0.04em]">
-                    18 tasks
-                  </h3>
-                </div>
-                <div className="rounded-xl bg-white/15 px-3 py-1 font-mono text-xs">
-                  +12%
-                </div>
-              </div>
-              <div className="mt-5 h-2 rounded-full bg-white/15">
-                <div className="h-full w-2/3 rounded-full bg-white" />
-              </div>
-            </div>
-
-            <div className="grid grid-cols-3 gap-3">
-              <div className="rounded-2xl bg-slate-100 p-4 dark:bg-white/[0.04]">
-                <div className="h-8 w-8 rounded-xl bg-cyan-400/20" />
-                <div className="mt-4 h-3 w-14 rounded-full bg-slate-200 dark:bg-white/[0.08]" />
-                <div className="mt-2 h-6 w-10 rounded-full bg-slate-300 dark:bg-white/[0.12]" />
-              </div>
-              <div className="rounded-2xl bg-slate-100 p-4 dark:bg-white/[0.04]">
-                <div className="h-8 w-8 rounded-xl bg-violet-400/20" />
-                <div className="mt-4 h-3 w-14 rounded-full bg-slate-200 dark:bg-white/[0.08]" />
-                <div className="mt-2 h-6 w-12 rounded-full bg-slate-300 dark:bg-white/[0.12]" />
-              </div>
-              <div className="rounded-2xl bg-slate-100 p-4 dark:bg-white/[0.04]">
-                <div className="h-8 w-8 rounded-xl bg-emerald-400/20" />
-                <div className="mt-4 h-3 w-14 rounded-full bg-slate-200 dark:bg-white/[0.08]" />
-                <div className="mt-2 h-6 w-10 rounded-full bg-slate-300 dark:bg-white/[0.12]" />
-              </div>
-            </div>
-          </div>
-
-          <div className="rounded-2xl bg-slate-100/90 p-4 dark:bg-white/[0.04]">
-            <div className="flex items-center justify-between">
-              <div className="h-4 w-24 rounded-full bg-slate-300 dark:bg-white/[0.12]" />
-              <div className="h-8 w-8 rounded-xl bg-slate-200 dark:bg-white/[0.08]" />
-            </div>
-            <div className="mt-5 h-36 rounded-[20px] bg-white p-4 shadow-inner dark:bg-[#131724]">
-              <div className="flex h-full items-end gap-3">
-                <div className="h-12 w-full rounded-t-2xl bg-cyan-400/70" />
-                <div className="h-20 w-full rounded-t-2xl bg-indigo-400/70" />
-                <div className="h-28 w-full rounded-t-2xl bg-violet-400/80" />
-                <div className="h-16 w-full rounded-t-2xl bg-emerald-400/70" />
-              </div>
-            </div>
-            <div className="mt-4 space-y-3">
-              <div className="h-3 w-full rounded-full bg-slate-200 dark:bg-white/[0.08]" />
-              <div className="h-3 w-4/5 rounded-full bg-slate-200 dark:bg-white/[0.08]" />
-              <div className="h-3 w-3/5 rounded-full bg-slate-200 dark:bg-white/[0.08]" />
-            </div>
-          </div>
-        </div>
-      </div>
+      {project.liveUrl ? (
+        <a
+          href={project.liveUrl}
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex items-center gap-2 rounded-full border border-slate-200 px-3 py-2 text-sm font-medium text-slate-700 transition hover:border-indigo-300 hover:text-indigo-600 dark:border-white/10 dark:text-slate-200 dark:hover:border-indigo-400/50 dark:hover:text-white"
+        >
+          <ExternalLink size={15} />
+          Live Site
+        </a>
+      ) : null}
     </div>
   );
 }
 
-function SmallPreview({ variant }) {
-  if (variant === "inventory") {
-    return (
-      <div className="h-44 rounded-t-[24px] bg-gradient-to-br from-sky-100 via-white to-cyan-100 p-4 dark:from-[#101a2a] dark:via-[#0f141d] dark:to-[#0c1a21]">
-        <div className="grid h-full grid-cols-[0.65fr_1fr] gap-3">
-          <div className="space-y-2 rounded-2xl bg-white/90 p-3 dark:bg-white/[0.05]">
-            <div className="h-4 w-16 rounded-full bg-slate-200 dark:bg-white/[0.08]" />
-            <div className="space-y-2 pt-3">
-              <div className="h-9 rounded-xl bg-sky-100 dark:bg-sky-400/10" />
-              <div className="h-9 rounded-xl bg-slate-100 dark:bg-white/[0.04]" />
-              <div className="h-9 rounded-xl bg-slate-100 dark:bg-white/[0.04]" />
-            </div>
-          </div>
-          <div className="space-y-3">
-            <div className="h-14 rounded-2xl bg-white/90 dark:bg-white/[0.05]" />
-            <div className="grid h-[calc(100%-3.5rem)] grid-cols-2 gap-3">
-              <div className="rounded-2xl bg-white/90 dark:bg-white/[0.05]" />
-              <div className="rounded-2xl bg-white/90 dark:bg-white/[0.05]" />
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  if (variant === "tracker") {
-    return (
-      <div className="h-44 rounded-t-[24px] bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 p-4">
-        <div className="rounded-[22px] border border-white/10 bg-black/20 p-4 text-white">
-          <div className="h-3 w-20 rounded-full bg-white/20" />
-          <div className="mt-4 max-w-[180px] text-2xl font-bold leading-tight tracking-[-0.04em]">
-            Track applications with clarity
-          </div>
-          <div className="mt-5 flex gap-2">
-            <div className="h-8 w-20 rounded-full bg-cyan-400/80" />
-            <div className="h-8 w-16 rounded-full bg-white/10" />
-          </div>
-        </div>
-      </div>
-    );
-  }
-
+function FeaturedPreview({ project }) {
   return (
-    <div className="h-44 rounded-t-[24px] bg-gradient-to-br from-indigo-50 via-white to-blue-50 p-4 dark:from-[#13172a] dark:via-[#10131b] dark:to-[#101827]">
-      <div className="grid h-full gap-3">
-        <div className="grid grid-cols-[1fr_0.9fr] gap-3">
-          <div className="rounded-2xl bg-white/95 p-3 dark:bg-white/[0.05]">
-            <div className="h-4 w-20 rounded-full bg-slate-200 dark:bg-white/[0.08]" />
-            <div className="mt-3 space-y-2">
-              <div className="h-8 rounded-xl bg-slate-100 dark:bg-white/[0.04]" />
-              <div className="h-8 rounded-xl bg-slate-100 dark:bg-white/[0.04]" />
-            </div>
-          </div>
-          <div className="rounded-2xl bg-gradient-to-br from-indigo-500 to-blue-500 p-3 text-white">
-            <div className="h-4 w-16 rounded-full bg-white/20" />
-            <div className="mt-8 h-10 rounded-2xl bg-white/15" />
-          </div>
-        </div>
-        <div className="grid grid-cols-3 gap-3">
-          <div className="rounded-2xl bg-white/90 dark:bg-white/[0.05]" />
-          <div className="rounded-2xl bg-white/90 dark:bg-white/[0.05]" />
-          <div className="rounded-2xl bg-white/90 dark:bg-white/[0.05]" />
-        </div>
+    <div className="relative flex min-h-[250px] items-center justify-center overflow-hidden rounded-t-[24px] bg-[#0f1320]  lg:min-h-full lg:rounded-tl-[24px] lg:rounded-tr-none lg:rounded-bl-[24px] lg:rounded-br-none">
+      <div className="w-full overflow-hidden  bg-[#0b1020] shadow-[0_18px_48px_-28px_rgba(0,0,0,0.55)]">
+        <img
+          src={project.image}
+          alt={`${project.title} preview`}
+          className="block h-full w-full object-contain object-center"
+        />
       </div>
     </div>
   );
@@ -184,7 +128,13 @@ function SmallPreview({ variant }) {
 function ProjectCard({ project }) {
   return (
     <article className="overflow-hidden rounded-[28px] border border-slate-200 bg-white/92 shadow-[0_24px_80px_-45px_rgba(15,23,42,0.25)] transition duration-200 hover:-translate-y-1 hover:border-indigo-200 hover:shadow-[0_28px_70px_-36px_rgba(99,102,241,0.25)] dark:border-white/10 dark:bg-[#17181f] dark:shadow-none dark:hover:border-indigo-400/20 dark:hover:bg-[#1b1d25]">
-      <SmallPreview variant={project.variant} />
+      <div className="h-44 overflow-hidden rounded-t-[24px] bg-slate-100 dark:bg-[#11141c]">
+        <img
+          src={project.image}
+          alt={`${project.title} preview`}
+          className="h-full w-full object-cover"
+        />
+      </div>
       <div className="p-5">
         <h3 className="text-2xl font-bold tracking-[-0.03em] text-slate-900 dark:text-white">
           {project.title}
@@ -206,12 +156,7 @@ function ProjectCard({ project }) {
           <span className="font-mono text-sm text-slate-400 dark:text-slate-500">
             {project.year}
           </span>
-          <button
-            type="button"
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 text-slate-700 transition hover:border-indigo-300 hover:text-indigo-600 dark:border-white/10 dark:text-slate-300 dark:hover:border-indigo-400/50 dark:hover:text-white"
-          >
-            <ArrowRight size={18} />
-          </button>
+          <ProjectLinks project={project} />
         </div>
       </div>
     </article>
@@ -254,10 +199,10 @@ function Projects() {
           </a>
         </div>
 
-        <div className="mt-14 grid gap-5 lg:grid-cols-[1.15fr_0.85fr]">
+        <div className="mt-14 mb-16 flex flex-col items-center gap-10">
           <article className="overflow-hidden rounded-[30px] border border-slate-200 bg-white/92 shadow-[0_28px_80px_-48px_rgba(15,23,42,0.24)] dark:border-white/10 dark:bg-[#17181f] dark:shadow-none">
-            <div className="grid lg:grid-cols-[1.1fr_0.9fr]">
-              <FeaturedPreview />
+            <div className="grid lg:grid-cols-[1fr_0.72fr]">
+              <FeaturedPreview project={featuredProject} />
 
               <div className="flex flex-col justify-between p-6 md:p-8">
                 <div>
@@ -283,12 +228,7 @@ function Projects() {
                   <span className="font-mono text-sm text-slate-400 dark:text-slate-500">
                     {featuredProject.year}
                   </span>
-                  <button
-                    type="button"
-                    className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-r from-indigo-500 to-violet-500 text-white shadow-[0_18px_40px_-20px_rgba(99,102,241,0.9)] transition hover:from-indigo-600 hover:to-violet-600 dark:shadow-[0_24px_60px_-28px_rgba(99,102,241,0.75)]"
-                  >
-                    <ArrowRight size={18} />
-                  </button>
+                  <ProjectLinks project={featuredProject} />
                 </div>
               </div>
             </div>
