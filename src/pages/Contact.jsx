@@ -231,7 +231,7 @@ function Contact() {
                   <span className="font-semibold text-slate-950 dark:text-white">
                     Currently available for new projects.
                   </span>{" "}
-                  For urgent matters, email is the fastest way to reach me.
+                  For urgent matters, Email is the fastest way to reach me.
                 </p>
               </div>
             </div>
