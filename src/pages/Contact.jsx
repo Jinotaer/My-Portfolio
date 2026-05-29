@@ -240,7 +240,7 @@ function Contact() {
           <div>
             <form
               onSubmit={handleSubmit}
-              className="relative mt-8 space-y-6 rounded-2xl border border-slate-200 bg-white/85 p-5 shadow-[0_20px_60px_-45px_rgba(15,23,42,0.25)] dark:border-white/8 dark:bg-white/[0.03] dark:shadow-none"
+              className="relative mt-8 space-y-6 rounded-2xl border border-slate-200 bg-white/85 p-5 shadow-[0_20px_60px_-45px_rgba(15,23,42,0.25)] dark:border-white/8 dark:bg-white/[0.05] dark:shadow-none"
             >
               <div
                 className="absolute -left-[9999px] top-auto h-px w-px overflow-hidden"

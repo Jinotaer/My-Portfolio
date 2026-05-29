@@ -25,8 +25,8 @@ function About() {
       className="relative isolate -mx-6 overflow-hidden border-t border-b border-gray-300 px-6 py-18 transition-colors md:-mx-8 md:px-8 md:py-24 dark:border-white/10"
     >
       <div className="pointer-events-none absolute inset-0 -z-20 hidden dark:block bg-[radial-gradient(circle_at_22%_26%,rgba(99,102,241,0.14),transparent_0_18%),radial-gradient(circle_at_78%_52%,rgba(34,211,238,0.12),transparent_0_22%),radial-gradient(circle_at_50%_84%,rgba(168,85,247,0.08),transparent_0_18%)]" />
-      <div className="absolute left-8 top-24 -z-10 h-56 w-56 rounded-full bg-indigo-200/45 blur-3xl dark:hidden" />
-      <div className="absolute right-10 top-32 -z-10 h-72 w-72 rounded-full bg-cyan-200/35 blur-3xl dark:hidden" />
+      <div className="absolute left-8 top-24 -z-10 hidden h-56 w-56 rounded-full bg-indigo-200/45 blur-3xl dark:hidden" />
+      <div className="absolute right-10 top-32 -z-10 hidden h-72 w-72 rounded-full bg-cyan-200/35 blur-3xl dark:hidden" />
 
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(340px,0.9fr)] lg:items-start lg:gap-12">
@@ -94,7 +94,7 @@ function About() {
                   </h3>
                 </div>
                 <div className="rounded-2xl bg-gradient-to-br from-indigo-500 to-cyan-400 px-3 py-2 font-mono text-xs font-medium text-white shadow-[0_18px_36px_-24px_rgba(59,130,246,0.85)]">
-                  OJT Ready
+                  Ready
                 </div>
               </div>
 

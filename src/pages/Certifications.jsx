@@ -45,6 +45,8 @@ const certifications = [
   },
 ];
 
+const count = certifications.length;
+
 function CertificationCard({ item }) {
   const Icon = item.icon;
   const isAward = item.tone === "award";
@@ -101,8 +103,8 @@ function Certifications() {
           </p>
         </div>
 
-        <div className="inline-flex items-center gap-2 rounded-xl border border-white/12 bg-white/[0.04] px-5 py-3 text-sm font-medium text-slate-200">
-          <BadgeCheck size={16} />7 recognitions collected
+        <div className="inline-flex items-center gap-2 rounded-xl border border-gray-300 bg-white px-5 py-3 text-sm font-medium text-slate-600 dark:border-white/20 dark:bg-white/[0.02] dark:text-slate-300">
+          <BadgeCheck size={16} />{count} recognitions collected
         </div>
       </div>
 

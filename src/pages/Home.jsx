@@ -73,7 +73,7 @@ function Home() {
           </div>
         </div>
 
-        <div className="w-full lg:-mt-10 lg:self-start hidden sm:block">
+        <div className="w-full lg:-mt-10 lg:self-start hidden lg:block ">
           <img
             src={jinoImage}
             alt="Jino Taer portrait"
