@@ -1,7 +1,7 @@
 const quickFacts = [
   { label: "Role", value: "IT Student & Aspiring Web Developer" },
   { label: "Current Focus", value: "Web Development & System Design" },
-  { label: "Main Stack", value: "React, Tailwind CSS, Laravel, MySQL" },
+  { label: "Main Stack", value: "React, Tailwind CSS, Laravel, MySQL, PHP, " },
   { label: "Approach", value: "Clean, practical, user-first" },
 ];
 

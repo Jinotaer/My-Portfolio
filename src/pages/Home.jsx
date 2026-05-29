@@ -13,9 +13,9 @@ function Home() {
       id="home"
       className="relative isolate mx-auto max-w-7xl overflow-hidden py-4 transition-colors md:py-6 "
     >
-      <div className="absolute left-20 top-20 -z-10 h-72 w-72 rounded-full bg-indigo-200/50 blur-3xl dark:bg-indigo-500/15" />
-      <div className="absolute right-30 top-10 -z-10 h-80 w-80 rounded-full bg-sky-200/45 blur-3xl dark:bg-cyan-500/12" />
-      <div className="absolute bottom-15 left-1/3 -z-10 h-64 w-64 -translate-x-1/2 rounded-full bg-violet-200/40 blur-3xl dark:bg-violet-500/10" />
+      <div className="absolute left-20 top-20 -z-10 hidden h-72 w-72 rounded-full bg-indigo-200/50 blur-3xl dark:bg-indigo-500/15 sm:block" />
+      <div className="absolute right-30 top-10 -z-10 hidden h-80 w-80 rounded-full bg-sky-200/45 blur-3xl dark:bg-cyan-500/12 sm:block" />
+      <div className="absolute bottom-15 left-1/3 -z-10 hidden h-64 w-64 -translate-x-1/2 rounded-full bg-violet-200/40 blur-3xl dark:bg-violet-500/10 sm:block" />
 
       <div className="grid gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(420px,560px)] lg:items-start">
         <div className="max-w-2xl">
@@ -73,7 +73,7 @@ function Home() {
           </div>
         </div>
 
-        <div className="w-full lg:-mt-10 lg:self-start">
+        <div className="w-full lg:-mt-10 lg:self-start hidden sm:block">
           <img
             src={jinoImage}
             alt="Jino Taer portrait"
