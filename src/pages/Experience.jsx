@@ -1,47 +1,60 @@
 const experiences = [
   {
-    period: "2025 - Present",
-    title: "Portfolio & Frontend Projects",
-    role: "Personal Development Track",
+    period: "2023 - Present",
+    title: "BS Information Technology",
+    role: "Bukidnon State University",
     location: "Philippines",
     current: true,
     summary:
-      "Building portfolio pieces and interface-driven projects focused on clean structure, responsiveness, and practical user experience.",
+      "Currently pursuing a Bachelor of Science in Information Technology while developing practical skills in software development, web technologies, database management, and system design.",
     bullets: [
-      "Designed and implemented React-based interfaces with reusable component structure and responsive layouts.",
-      "Worked on portfolio presentation, section architecture, and UI polish to communicate skills more clearly.",
-      "Practiced translating references into working layouts while keeping code readable and maintainable.",
+         "Gained hands-on experience in frontend, backend, database design, and responsive UI.",
+      "Practiced building applications with React, Tailwind CSS, Laravel, PHP, MySQL, Java, Android, Docker, and APIs.",
+      "Improved skills in clean code, component structure, layouts, and software workflows.",
+      "Joined academic activities, technical learning, and GitHub-based practice.",
+      "Recognized as a Dean's Lister for consistent academic performance.",
     ],
-    tags: ["React", "Tailwind", "JavaScript", "Responsive UI", "UX"],
+    // tags: [
+    //   "React",
+    //   "Tailwind",
+    //   "Laravel",
+    //   "PHP",
+    //   "MySQL",
+    //   "Java",
+    //   "Android",
+    //   "Docker",
+    //   "API",
+    // ],
   },
-  {
-    period: "2024 - 2025",
-    title: "Academic System Projects",
-    role: "Student Developer",
-    location: "School Projects",
-    summary:
-      "Developed academic and system-oriented applications as part of coursework, with emphasis on usability, database structure, and functional delivery.",
-    bullets: [
-      "Built CRUD-based systems for inventory, records, and school-related workflows.",
-      "Connected frontend forms with backend logic and database operations using practical full-stack patterns.",
-      "Improved project organization by separating layout, components, and data-driven views more clearly.",
-    ],
-    tags: ["PHP", "MySQL", "XAMPP", "System Design", "CRUD"],
-  },
-  {
-    period: "2023 - 2024",
-    title: "Web Development Learning",
-    role: "Self-Directed Practice",
-    location: "Independent Study",
-    summary:
-      "Focused on strengthening frontend fundamentals and understanding how real web interfaces are structured, styled, and shipped.",
-    bullets: [
-      "Practiced HTML, CSS, and JavaScript through small web builds and UI recreations.",
-      "Learned component-based development and modern tooling through React and Vite projects.",
-      "Built confidence in turning static ideas into functioning interfaces with cleaner visual hierarchy.",
-    ],
-    tags: ["HTML", "CSS", "JavaScript", "Vite", "Frontend"],
-  },
+
+  // {
+  //   period: "2024 - 2025",
+  //   title: "Academic System Projects",
+  //   role: "Student Developer",
+  //   location: "School Projects",
+  //   summary:
+  //     "Developed academic and system-oriented applications as part of coursework, with emphasis on usability, database structure, and functional delivery.",
+  //   bullets: [
+  //     "Built CRUD-based systems for inventory, records, and school-related workflows.",
+  //     "Connected frontend forms with backend logic and database operations using practical full-stack patterns.",
+  //     "Improved project organization by separating layout, components, and data-driven views more clearly.",
+  //   ],
+  //   tags: ["PHP", "MySQL", "XAMPP", "System Design", "CRUD"],
+  // },
+  // {
+  //   period: "2023 - 2024",
+  //   title: "Web Development Learning",
+  //   role: "Self-Directed Practice",
+  //   location: "Independent Study",
+  //   summary:
+  //     "Focused on strengthening frontend fundamentals and understanding how real web interfaces are structured, styled, and shipped.",
+  //   bullets: [
+  //     "Practiced HTML, CSS, and JavaScript through small web builds and UI recreations.",
+  //     "Learned component-based development and modern tooling through React and Vite projects.",
+  //     "Built confidence in turning static ideas into functioning interfaces with cleaner visual hierarchy.",
+  //   ],
+  //   tags: ["HTML", "CSS", "JavaScript", "Vite", "Frontend"],
+  // },
 ];
 
 function Experience() {
@@ -59,15 +72,17 @@ function Experience() {
           </div>
 
           <h2 className="mt-5 text-4xl font-black tracking-[-0.05em] text-slate-950 dark:text-white sm:text-5xl md:text-6xl">
-            Where I've
+            {/* Where I've */}
+            Where I Build
             <span className="ml-3 pr-2 font-light italic  bg-gradient-to-r from-indigo-500 via-blue-500 to-cyan-400  bg-clip-text text-transparent">
-              made impact
+              {/* made impact */}
+              and Learn
             </span>
           </h2>
         </div>
 
         <div className="font-mono text-xs uppercase tracking-[0.18em] text-slate-400 dark:text-slate-500 lg:pt-10">
-          3 phases - student projects - growing experience
+          ACADEMIC JOURNEY - TECHNICAL SKILLS - GROWING EXPERIENCE
         </div>
       </div>
 
@@ -129,7 +144,7 @@ function Experience() {
                 ))}
               </ul>
 
-              <div className="mt-8 flex flex-wrap gap-2">
+              {/* <div className="mt-8 flex flex-wrap gap-2">
                 {item.tags.map((tag) => (
                   <span
                     key={tag}
@@ -138,7 +153,7 @@ function Experience() {
                     {tag}
                   </span>
                 ))}
-              </div>
+              </div> */}
             </div>
           </div>
         ))}

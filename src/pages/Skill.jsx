@@ -20,6 +20,7 @@ import {
   SiPostman,
   SiXampp,
   SiDocker,
+  SiWordpress,
 } from "react-icons/si";
 
 import { MonitorSmartphone } from "lucide-react";
@@ -47,6 +48,8 @@ const toolItems = [
   { name: "Postman", icon: SiPostman, color: "text-orange-500" },
   { name: "XAMPP", icon: SiXampp, color: "text-orange-600" },
   { name: "Docker", icon: SiDocker, color: "text-blue-500" },
+  { name: "Wordpress", icon: SiWordpress, color: "text-blue-500"},
+  // { name: "Weebly", icon: SiWebassembly, color: "text-blue-500"},
 ];
 
 function SkillCard({ item }) {
