@@ -71,11 +71,9 @@ function Experience() {
             // Experience
           </div>
 
-          <h2 className="mt-5 text-4xl font-black tracking-[-0.05em] text-slate-950 dark:text-white sm:text-5xl md:text-6xl">
-            {/* Where I've */}
+          <h2 className="mt-5 text-4xl font-extrabold tracking-[-0.05em] text-slate-950 dark:text-white sm:text-5xl md:text-6xl">
             Where I Build
-            <span className="ml-3 pr-2 font-light italic  bg-gradient-to-r from-indigo-500 via-blue-500 to-cyan-400  bg-clip-text text-transparent">
-              {/* made impact */}
+            <span className="ml-3 inline-block bg-gradient-to-r from-indigo-500 via-blue-500 to-cyan-400 bg-clip-text pr-4 font-light italic text-transparent [box-decoration-break:clone] [-webkit-box-decoration-break:clone]">
               and Learn
             </span>
           </h2>

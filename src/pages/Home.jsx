@@ -1,4 +1,8 @@
+import { useEffect, useState } from "react";
 import jinoImage from "../assets/jino1.png";
+import jinoDarkImage from "../assets/jino2.png";
+
+const nameToType = "Jino Taer";
 
 const stats = [
   { value: "25+", label: "Repositories" },
@@ -8,6 +12,28 @@ const stats = [
 ];
 
 function Home() {
+  const [displayedText, setDisplayedText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    let timeout;
+    if (!isDeleting && displayedText === nameToType) {
+      timeout = setTimeout(() => setIsDeleting(true), 3500);
+    } else if (isDeleting && displayedText === "") {
+      timeout = setTimeout(() => setIsDeleting(false), 500);
+    } else {
+      const speed = isDeleting ? 65 : 120;
+      timeout = setTimeout(() => {
+        setDisplayedText((prev) =>
+          isDeleting
+            ? nameToType.substring(0, prev.length - 1)
+            : nameToType.substring(0, prev.length + 1),
+        );
+      }, speed);
+    }
+    return () => clearTimeout(timeout);
+  }, [displayedText, isDeleting]);
+
   return (
     <section
       id="home"
@@ -21,26 +47,33 @@ function Home() {
         <div className="max-w-2xl">
           <div className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white/70 px-4 py-2 font-mono text-xs text-indigo-500 shadow-sm backdrop-blur transition-colors dark:border-white/15 dark:bg-white/[0.03] dark:text-indigo-300 dark:shadow-none">
             <span className="h-2 w-2 rounded-full bg-emerald-500" />
-            <span>Available</span>
-            <span className="text-gray-300 dark:text-slate-600">-</span>
-            <span> Junior Developer roles</span>
+            <span>Web Developer </span>
+            <span className="text-gray-300 dark:text-slate-600">|</span>
+            <span> Networking Enthusiast</span>
           </div>
 
           <h1 className="mt-8 text-3xl font-extrabold leading-[0.92] tracking-[-0.035em] text-slate-700 transition-colors dark:text-slate-100 sm:text-5xl md:text-[5.25rem]">
             Hi, I'm
-            <span className="mt-1 block bg-gradient-to-r from-indigo-500 via-blue-500 to-cyan-400 bg-clip-text text-transparent">
-              Jino Taer
+            <span className="mt-1 flex items-baseline min-h-[1.1em]">
+              <span className="bg-gradient-to-r from-indigo-500 via-blue-500 to-cyan-400 bg-clip-text text-transparent pr-1">
+                {displayedText || "\u00A0"}
+              </span>
+              <span className="ml-1 inline-block h-[0.75em] w-[3px] sm:w-1 md:w-[5px] rounded-full bg-cyan-400 motion-safe:animate-[pulse_0.8s_ease-in-out_infinite]" />
             </span>
           </h1>
 
           <p className="mt-7 flex items-center gap-3 font-mono text-[1.05rem] font-medium tracking-[-0.02em] text-slate-600 transition-colors dark:text-slate-300">
-            <span>Web Developer in Training</span>
-            <span className="h-4 w-0.5 bg-cyan-500 motion-safe:animate-[pulse_0.9s_ease-in-out_infinite]" />
+            <span>Web Developer | Networking Enthusiast</span>
+            {/* <span className="h-4 w-0.5 bg-cyan-500 motion-safe:animate-[pulse_0.9s_ease-in-out_infinite]" /> */}
           </p>
 
           <p className="mt-4 max-w-xl text-[1.05rem] leading-10 text-slate-600 transition-colors tracking-normal dark:text-slate-400">
-           I'm an IT student passionate about web development, system design, and creating practical digital solutions. I enjoy building clean interfaces, writing maintainable code, and developing user-friendly experiences that solve real-world problems.
-
+            I'm an IT student with a strong interest in web development, system
+            design, and computer networking. I enjoy creating responsive and
+            user-friendly applications while also learning about network
+            configuration, system connectivity, and troubleshooting. My goal is
+            to continue improving my technical skills and build practical
+            solutions that combine software and networking.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-4">
@@ -52,7 +85,7 @@ function Home() {
               <span className="ml-2 inline-block">&rarr;</span>
             </a>
             <a
-              href="#"
+              href="#contact"
               className="rounded-xl border border-slate-300 bg-white/70 px-7 py-3.5 text-base font-medium text-slate-700 transition hover:border-indigo-300 hover:text-indigo-600 dark:border-white/10 dark:bg-white/[0.02] dark:text-slate-200 dark:hover:border-indigo-400/50 dark:hover:bg-white/[0.04] dark:hover:text-white"
             >
               Download CV
@@ -73,12 +106,17 @@ function Home() {
           </div>
         </div>
 
-        <div className="w-full lg:-mt-10 lg:self-start hidden lg:block ">
+        <div className="hidden w-full lg:-mt-10 lg:block lg:self-start">
           <img
             src={jinoImage}
             alt="Jino Taer portrait"
             className="block h-auto w-full object-contain object-top"
           />
+          {/* <img
+            src={jinoDarkImage}
+            alt="Jino Taer portrait"
+            className="hidden h-auto w-full object-contain object-top dark:block"
+          /> */}
         </div>
       </div>
     </section>

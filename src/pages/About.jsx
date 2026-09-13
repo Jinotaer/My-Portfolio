@@ -1,14 +1,20 @@
 const quickFacts = [
   { label: "Role", value: "IT Student & Aspiring Web Developer" },
-  { label: "Current Focus", value: "Web Development & System Design" },
+  {
+    label: "Current Focus",
+    value: "Web Development, System Design & Networking",
+  },
   { label: "Main Stack", value: "React, Tailwind CSS, Laravel, MySQL, PHP, " },
-  { label: "Approach", value: "Clean, practical, user-first" },
+  {
+    label: "Networking Skills",
+    value: "Basic Network Configuration, Troubleshooting & Connectivity",
+  },
 ];
 
 const focusAreas = [
-  "Frontend interfaces that feel clear and responsive",
-  "System ideas translated into usable screens",
-  "Maintainable code structure over rushed output",
+  "Frontend interfaces that feel clean and responsive",
+  "Systems designed with practical user flows",
+  "Networking and system connectivity fundamentals",
   "Learning by building real, practical projects",
 ];
 
@@ -36,33 +42,20 @@ function About() {
             </div>
 
             <h2 className="mt-7 max-w-3xl text-3xl font-extrabold leading-tight tracking-[-0.04em] text-slate-800 transition-colors dark:text-slate-100 sm:text-4xl md:text-5xl">
-              Building practical digital work
-              <span className="mt-2 block bg-gradient-to-r from-indigo-500 via-blue-500 to-cyan-400 bg-clip-text text-transparent">
-                while growing into real-world engineering.
+              Building digital solutions
+              <span className="mt-1.5 block bg-gradient-to-r from-indigo-500 via-blue-500 to-cyan-400 bg-clip-text pr-4 font-light italic text-transparent [box-decoration-break:clone] [-webkit-box-decoration-break:clone] lg:ml-3 lg:mt-0 lg:inline-block">
+              in software and networking.
               </span>
             </h2>
 
             <div className="mt-7 space-y-5 text-[1.05rem] leading-9 text-slate-600 transition-colors dark:text-slate-400">
               <p>
-                I’m a BS Information Technology student at Bukidnon State
-                University who enjoys creating practical and user-friendly
-                digital solutions. I’m especially interested in web development,
-                interface design, and building systems that are organized,
-                useful, and easy to understand.
+                I’m a BS Information Technology student at Bukidnon State University interested in web development, system design, and computer networking. I enjoy creating practical and user-friendly applications while learning how software, servers, databases, and networks work together.
               </p>
               <p>
-                Through my academic projects and personal practice, I continue
-                to improve my skills in frontend development, backend
-                fundamentals, database management, server setup, and responsive
-                design. I like turning ideas into working applications using
-                tools such as React, Tailwind CSS, Laravel, PHP, MySQL, Docker,
-                and basic server management.
+                I continue to improve my skills through academic projects and personal practice. My goal is to strengthen my software development and networking skills and become a well-rounded IT professional.
               </p>
-              <p>
-                I am focused on continuous learning, improving my development
-                skills, and creating projects that are simple, useful, and easy
-                to use.
-              </p>
+             
             </div>
 
             <div className="mt-10 grid gap-4 sm:grid-cols-2">

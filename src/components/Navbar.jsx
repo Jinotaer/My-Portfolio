@@ -111,7 +111,7 @@ function Navbar() {
 
           <h1 className="text-lg font-bold text-gray-900 transition-colors dark:text-slate-100">
             jino
-            <span className="text-indigo-600 dark:text-violet-400">.dev</span>
+            <span className="text-indigo-600 dark:text-violet-400"> Taer</span>
           </h1>
         </div>
 

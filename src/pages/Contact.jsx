@@ -11,8 +11,8 @@ const contactLinks = [
   },
   {
     label: "Email",
-    value: "jjane0248@gmail.com",
-    href: "mailto:jjane0248@gmail.com",
+    value: "jinotaer0248gmail.com",
+    href: "mailto:jinotaer0248@gmail.com",
     icon: Mail,
   },
   {
@@ -197,7 +197,9 @@ function Contact() {
                     key={item.label}
                     href={item.href}
                     target={item.href.startsWith("http") ? "_blank" : undefined}
-                    rel={item.href.startsWith("http") ? "noreferrer" : undefined}
+                    rel={
+                      item.href.startsWith("http") ? "noreferrer" : undefined
+                    }
                     className="group flex items-center justify-between border-b border-slate-200 py-5 transition hover:border-indigo-300 dark:border-white/8 dark:hover:border-indigo-400/30"
                   >
                     <div className="flex items-center gap-4">
@@ -256,18 +258,49 @@ function Contact() {
                 />
               </div>
 
-            <div className="grid gap-4 md:grid-cols-2">
+              <div className="grid gap-4 md:grid-cols-2">
+                <label className="block">
+                  <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-slate-500">
+                    Your Name *
+                  </span>
+                  <input
+                    name="name"
+                    type="text"
+                    placeholder="Jino Taer"
+                    autoComplete="name"
+                    required
+                    value={formData.name}
+                    onChange={handleChange}
+                    className="mt-3 w-full rounded-2xl border border-slate-200 bg-white px-5 py-4 text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-indigo-400/50 dark:border-white/10 dark:bg-white/[0.03] dark:text-white dark:placeholder:text-slate-500"
+                  />
+                </label>
+
+                <label className="block">
+                  <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-slate-500">
+                    Email Address *
+                  </span>
+                  <input
+                    name="email"
+                    type="email"
+                    placeholder="you@example.com"
+                    autoComplete="email"
+                    required
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="mt-3 w-full rounded-2xl border border-slate-200 bg-white px-5 py-4 text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-indigo-400/50 dark:border-white/10 dark:bg-white/[0.03] dark:text-white dark:placeholder:text-slate-500"
+                  />
+                </label>
+              </div>
+
               <label className="block">
                 <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-slate-500">
-                  Your Name *
+                  Opportunity Type
                 </span>
                 <input
-                  name="name"
+                  name="opportunity"
                   type="text"
-                  placeholder="Jino Taer"
-                  autoComplete="name"
-                  required
-                  value={formData.name}
+                  placeholder="Web Development, Project Collaboration, etc."
+                  value={formData.opportunity}
                   onChange={handleChange}
                   className="mt-3 w-full rounded-2xl border border-slate-200 bg-white px-5 py-4 text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-indigo-400/50 dark:border-white/10 dark:bg-white/[0.03] dark:text-white dark:placeholder:text-slate-500"
                 />
@@ -275,63 +308,32 @@ function Contact() {
 
               <label className="block">
                 <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-slate-500">
-                  Email Address *
+                  Company / Context
                 </span>
                 <input
-                  name="email"
-                  type="email"
-                  placeholder="you@example.com"
-                  autoComplete="email"
-                  required
-                  value={formData.email}
+                  name="context"
+                  type="text"
+                  placeholder="School, startup, agency, or project context"
+                  value={formData.context}
                   onChange={handleChange}
                   className="mt-3 w-full rounded-2xl border border-slate-200 bg-white px-5 py-4 text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-indigo-400/50 dark:border-white/10 dark:bg-white/[0.03] dark:text-white dark:placeholder:text-slate-500"
                 />
               </label>
-            </div>
 
-            <label className="block">
-              <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-slate-500">
-                Opportunity Type
-              </span>
-              <input
-                name="opportunity"
-                type="text"
-                placeholder="Web Development, Project Collaboration, etc."
-                value={formData.opportunity}
-                onChange={handleChange}
-                className="mt-3 w-full rounded-2xl border border-slate-200 bg-white px-5 py-4 text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-indigo-400/50 dark:border-white/10 dark:bg-white/[0.03] dark:text-white dark:placeholder:text-slate-500"
-              />
-            </label>
-
-            <label className="block">
-              <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-slate-500">
-                Company / Context
-              </span>
-              <input
-                name="context"
-                type="text"
-                placeholder="School, startup, agency, or project context"
-                value={formData.context}
-                onChange={handleChange}
-                className="mt-3 w-full rounded-2xl border border-slate-200 bg-white px-5 py-4 text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-indigo-400/50 dark:border-white/10 dark:bg-white/[0.03] dark:text-white dark:placeholder:text-slate-500"
-              />
-            </label>
-
-            <label className="block">
-              <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-slate-500">
-                Message *
-              </span>
-              <textarea
-                name="message"
-                rows="6"
-                placeholder="Tell me about the role, project, timeline, or what kind of help you need..."
-                required
-                value={formData.message}
-                onChange={handleChange}
-                className="mt-3 w-full rounded-2xl border border-slate-200 bg-white px-5 py-4 text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-indigo-400/50 dark:border-white/10 dark:bg-white/[0.03] dark:text-white dark:placeholder:text-slate-500"
-              />
-            </label>
+              <label className="block">
+                <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-slate-500">
+                  Message *
+                </span>
+                <textarea
+                  name="message"
+                  rows="6"
+                  placeholder="Tell me about the role, project, timeline, or what kind of help you need..."
+                  required
+                  value={formData.message}
+                  onChange={handleChange}
+                  className="mt-3 w-full rounded-2xl border border-slate-200 bg-white px-5 py-4 text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-indigo-400/50 dark:border-white/10 dark:bg-white/[0.03] dark:text-white dark:placeholder:text-slate-500"
+                />
+              </label>
 
               <div aria-live="polite">
                 {submitState.message ? (
@@ -409,8 +411,8 @@ function Contact() {
             </h3>
 
             <p className="mt-4 text-[0.98rem] leading-7 text-slate-600 dark:text-slate-400">
-              I received your inquiry and will review it as soon as possible.
-              If it is urgent, you can still reach me directly by email.
+              I received your inquiry and will review it as soon as possible. If
+              it is urgent, you can still reach me directly by email.
             </p>
 
             <div className="mt-8 flex gap-3">

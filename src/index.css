@@ -24,3 +24,19 @@ body {
     background-color 200ms ease,
     color 200ms ease;
 }
+
+@keyframes project-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-project-fade-up {
+  animation: project-fade-up 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
