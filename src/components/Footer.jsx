@@ -10,7 +10,7 @@ const footerLinks = [
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/jino-taer-81a51a412",
   },
-  { label: "Email", href: "mailto:jjane0248@gmail.com" },
+  { label: "Email", href: "mailto:jinotaer0248@gmail.com" },
   // { label: "Sitemap", href: "#top" },
 ];
 
