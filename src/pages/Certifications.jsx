@@ -15,22 +15,25 @@ import hybridImg from "../assets/certs/hybrid.png";
 import vehp2aImg from "../assets/certs/vehp2a.png";
 import wadhwaniProfImg from "../assets/certs/wadhwwaniproficency.png";
 import wadhwaniCompImg from "../assets/certs/wadhwanicompletion.png";
+import hackathonImg from "../assets/certs/hackathon.png";
+import literacyImg from "../assets/certs/literacy.png";
 
 const certifications = [
   {
-    title: "Dean's Lister Academic Distinction",
-    issuer: "Bukidnon State University",
-    date: "Multiple Semesters",
-    year: "2024 - 2026",
-    category: "ACADEMIC DISTINCTION",
-    image: null,
+    title: "ICT EXPO: InnoVa Hackathon",
+    issuer: "City of Valencia & DICT",
+    date: "Jun 11, 2026",
+    year: "2026",
+    category: "INNOVATION & HACKATHON",
+    image: hackathonImg,
     description:
-      "Consistently achieved top academic honors and Dean's List standing in the Bachelor of Science in Information Technology program across multiple academic terms at Bukidnon State University.",
+      "Awarded Certificate of Participation for active involvement, rapid prototyping, and collaborative problem-solving in the InnoVa Hackathon during the Valencia Goes Digital ICT Expo celebration.",
     tags: [
-      "Academic Excellence",
-      "Dean's Lister",
-      "Top Academic GPA",
-      "BukSU College of Tech",
+      "InnoVa Hackathon",
+      "Valencia Goes Digital",
+      "National ICT Month",
+      "DICT & NICP",
+      "Problem Solving",
     ],
     verifyUrl: "",
     tone: "award",
@@ -86,6 +89,7 @@ const certifications = [
     verifyUrl: "https://devcon.ph/",
     tone: "certificate",
   },
+  
   {
     title: "TOPCIT Practical Competency in ICT",
     issuer: "IITP (Institute for Information & Communications Tech)",
@@ -176,6 +180,43 @@ const certifications = [
     ],
     verifyUrl: "https://wadhwanifoundation.org/",
     tone: "certificate",
+  },
+  {
+    title: "Introduction to AI Literacy and Responsible Use",
+    issuer: "Mapúa University & CHED (ACHIEVE)",
+    date: "Sep 14, 2026",
+    year: "2026",
+    category: "ARTIFICIAL INTELLIGENCE",
+    image: literacyImg,
+    description:
+      "Completed the micro-credentials course on AI literacy, foundational machine learning concepts, ethical considerations, and responsible AI implementation in collaboration with Arizona State University and CHED.",
+    tags: [
+      "AI Literacy",
+      "Responsible AI",
+      "Mapúa University",
+      "CHED ACHIEVE",
+      "Micro-credentials",
+    ],
+    verifyUrl: "",
+    tone: "certificate",
+  },
+  {
+    title: "Dean's Lister Academic Distinction",
+    issuer: "Bukidnon State University",
+    date: "Multiple Semesters",
+    year: "2024 - 2026",
+    category: "ACADEMIC DISTINCTION",
+    image: null,
+    description:
+      "Consistently achieved top academic honors and Dean's List standing in the Bachelor of Science in Information Technology program across multiple academic terms at Bukidnon State University.",
+    tags: [
+      "Academic Excellence",
+      "Dean's Lister",
+      "Top Academic GPA",
+      "BukSU College of Tech",
+    ],
+    verifyUrl: "",
+    tone: "award",
   },
 ];
 
